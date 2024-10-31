@@ -127,6 +127,8 @@ class YachtGameUI(ctk.CTk):
 
         self.main_frame.pack()
 
+        tk.Button(self, text="Exit", command=self.hide_toggle).pack()
+
     @property
     def yacht(self):
         return self.__yacht
@@ -155,6 +157,12 @@ class YachtGameUI(ctk.CTk):
                                         command=lambda i=i, j=j: self.yacht.setScore(j, i, score[i]), fg_color="yellow")
                 else:
                     button.configure(text="", state="disabled", fg_color="black")
+    
+    def hide_toggle(self):
+        if self.main_frame.winfo_ismapped():
+            self.main_frame.pack_forget()
+        else:
+            self.main_frame.pack()
 
 
 if __name__ == "__main__":
