@@ -1,0 +1,4 @@
+# ひつようなこと
+```
+pip install customtkinter
+```
