@@ -1,0 +1,347 @@
+class DiceGroup:
+    def __init__(self):
+        self.__dices = [Dices()] * 5
+
+    def getButtons(self):
+        for dice in self.__dices:
+
+
+
+
+
+class Dice: 
+    def __init__(self):
+        self.__deme = 1 
+
+    def dice(self, n):
+        if n in self.r: 
+            self.r.append(n) 
+            サイコロボタンn+1の枠を黄色くする
+
+else: 
+
+    self.r.remove(n) 
+
+    サイコロボタンn+1の枠をなくす 
+
+        def redice(self):　#リストrに入ったダイスの振り直し 
+
+if m != 0: 
+
+    if self.r: 
+
+        for i in self.r: 
+
+    self.deme[i].randint(1,6) 
+
+    self.deme.sort() 
+
+    サイコロボタンの画像を更新する 
+
+    self.r = [] 
+
+    m -= 1 
+
+    def reset(self):　＃降りなおし回数のリセット 
+
+self.m = 2 
+
+    def firstdice(self):　＃ターンの最初にサイコロをすべて降るための準備 
+
+self.r = [0,1,2,3,4] 
+
+self.reset() 
+
+    def diceout(self):　＃出目を返す 
+
+return self.deme 
+
+ 
+
+class point: 
+
+    def __init__(self, n, dice): #nはゲーム開始ユースケースから渡された人数、diceはゲーム開始ユースケースから渡されたdiceクラスオブジェクト 
+
+self.__p = n　＃人数 
+
+self.__points = [[None, None, None,…※12こ,0,0] for _ in　range(self.__p)]　#各点数。13はボーナス、14は合計として扱う 
+
+self.__turns = self.p*12　＃残り総ターン数 
+
+self.__turn = 0　＃誰のターンかを示す 
+
+self.__dice = dice　＃diceオブジェクト 
+
+self.dice.firstdice() 
+
+self.dice.redice() 
+
+0人目のプレイヤーの名前を赤くする 
+
+エースボタン　#self.ace()を呼び出し 
+
+デュースボタン　#self.duce()を呼び出し 
+
+スリーボタン　#self.three()を呼び出し 
+
+フォーボタン　#self.four()を呼び出し 
+
+ファイブボタン　#self.five()を呼び出し 
+
+シックスボタン　#self.six()を呼び出し 
+
+チョイスボタン　#self.choice()を呼び出し 
+
+フォーナンバーズボタン　#self.fournumbers()を呼び出し 
+
+フルハウスボタン　#self.fullhouse()を呼び出し 
+
+スモールストレートボタン　#self.smallstrait()を呼び出し 
+
+ビッグストレートボタン　#self.bigstrait()を呼び出し 
+
+ヨットボタン　#self.yacht()を呼び出し 
+
+    def turning(self):　＃次のターンに移行する処理 
+
+	sleep.time(1) 
+
+self.turn番目のプレイヤー名を黒にする 
+
+self.turns -= 1 
+
+self.turn = (self.n * 12 - self.turns) % self.n 
+
+self.turn番目のプレイヤー名を赤にする 
+
+self.dice.firstdice() 
+
+self.dice.redice() 
+
+self.dice.reset() 
+
+    def ace(self):　＃各役が選択された時の処理 
+
+if self.points[self.turn][0] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にエースの条件で点数を算出 
+
+    self.points[self.turn][0] = n 
+
+    self.points[self.turn][13] += n 
+
+    if self.points[self.turn][0]+self.points[self.turn][1]+self.points[self.turn][2]+ self.points[self.turn][3]+ self.points[self.turn][4]+ self.points[self.turn][5] >= 63 and self.points[self.turn][12] == 0: 
+
+self.points[self.turn][12] = 35 
+
+self.points[self.turn][13] += 35 
+
+    self.turning() 
+
+    def duce(self): 
+
+if self.points[self.turn][1] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にデュースの条件で点数を算出 
+
+    self.points[self.turn][1] = n 
+
+    self.points[self.turn][13] += n 
+
+    if self.points[self.turn][0]+self.points[self.turn][1]+self.points[self.turn][2]+ self.points[self.turn][3]+ self.points[self.turn][4]+ self.points[self.turn][5] >= 63 and self.points[self.turn][12] == 0: 
+
+self.points[self.turn][12] = 35 
+
+self.points[self.turn][13] += 35 
+
+    self.turning() 
+
+    def three(self): 
+
+if self.points[self.turn][2] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にスリーの条件で点数を算出 
+
+    self.points[self.turn][2] = n 
+
+    self.points[self.turn][13] += n 
+
+    if self.points[self.turn][0]+self.points[self.turn][1]+self.points[self.turn][2]+ self.points[self.turn][3]+ self.points[self.turn][4]+ self.points[self.turn][5] >= 63 and self.points[self.turn][12] == 0: 
+
+self.points[self.turn][12] = 35 
+
+self.points[self.turn][13] += 35 
+
+    self.turning() 
+
+def four(self): 
+
+if self.points[self.turn][3] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にフォーの条件で点数を算出 
+
+    self.points[self.turn][3] = n 
+
+    self.points[self.turn][13] += n 
+
+    if self.points[self.turn][0]+self.points[self.turn][1]+self.points[self.turn][2]+ self.points[self.turn][3]+ self.points[self.turn][4]+ self.points[self.turn][5] >= 63 and self.points[self.turn][12] == 0: 
+
+self.points[self.turn][12] = 35 
+
+self.points[self.turn][13] += 35 
+
+    self.turning() 
+
+def five(self): 
+
+if self.points[self.turn][4] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にファイブの条件で点数を算出 
+
+    self.points[self.turn][4] = n 
+
+    self.points[self.turn][13] += n 
+
+    if self.points[self.turn][0]+self.points[self.turn][1]+self.points[self.turn][2]+ self.points[self.turn][3]+ self.points[self.turn][4]+ self.points[self.turn][5] >= 63 and self.points[self.turn][12] == 0: 
+
+self.points[self.turn][12] = 35 
+
+self.points[self.turn][13] += 35 
+
+    self.turning() 
+
+    def six(self): 
+
+if self.points[self.turn][5] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にシックスの条件で点数を算出 
+
+    self.points[self.turn][5] = n 
+
+    self.points[self.turn][13] += n 
+
+    if self.points[self.turn][0]+self.points[self.turn][1]+self.points[self.turn][2]+ self.points[self.turn][3]+ self.points[self.turn][4]+ self.points[self.turn][5] >= 63 and self.points[self.turn][12] == 0: 
+
+self.points[self.turn][12] = 35 
+
+self.points[self.turn][13] += 35 
+
+    self.turning() 
+
+    def choice(self): 
+
+if self.points[self.turn][6] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にチョイスの条件で点数を算出 
+
+    self.points[self.turn][6] = n 
+
+    self.points[self.turn][13] += n 
+
+    self.turning() 
+
+    def fournumbers(self): 
+
+if self.points[self.turn][7] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にフォーナンバーズの条件で点数を算出 
+
+    self.points[self.turn][7] = n 
+
+    self.points[self.turn][13] += n 
+
+    self.turning() 
+
+    def fullhouse(self): 
+
+if self.points[self.turn][8] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にフルハウスの条件で点数を算出 
+
+    self.points[self.turn][8] = n 
+
+    self.points[self.turn][13] += n 
+
+    self.turning() 
+
+    def smallstrait(self): 
+
+if self.points[self.turn][9] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にスモールストレートの条件で点数を算出 
+
+    self.points[self.turn][9] = n 
+
+    self.points[self.turn][13] += n 
+
+    self.turning() 
+
+    def bigstrait(self): 
+
+if self.points[self.turn][10] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にスモールストレートの条件で点数を算出 
+
+    self.points[self.turn][10] = n 
+
+    self.points[self.turn][13] += n 
+
+    self.turning() 
+
+    def yacht(self): 
+
+if self.points[self.turn][11] == None: 
+
+    d = self.dice.diceout() 
+
+    n = dに入った出目を基にヨットの条件で点数を算出 
+
+    self.points[self.turn][11] = n 
+
+    self.points[self.turn][13] += n 
+
+    self.turning() 
+
+ 
+
+ 
+
+class yocht: 
+
+    def __init__(self): 
+
+ゲーム開始ボタン　# start()を起動 
+
+テキストボックス 
+
+self.dice = dice() 
+
+    def start(self): 
+
+self.point = point(n, self.dice):　#nはテキストボックスに入力された人数 
+
+self.diceとself.point、nを使ってゲーム画面を生成 
+
+ 
